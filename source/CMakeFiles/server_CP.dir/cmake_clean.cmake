@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/server_CP.dir/jsoncpp.o"
   "CMakeFiles/server_CP.dir/server_CP.o"
-  "CMakeFiles/server_CP.dir/server_CP.o.d"
   "server_CP"
   "server_CP.pdb"
 )

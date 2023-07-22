@@ -1,14 +1,18 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/keti/KETI_BMC/server_CP/source/jsoncpp.cpp" "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/server_CP.dir/jsoncpp.o"
+  "/home/keti/KETI_BMC/server_CP/source/server_CP.cpp" "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/server_CP.dir/server_CP.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/keti/KETI_BMC/server_CP/source/server_CP.cpp" "CMakeFiles/server_CP.dir/server_CP.o" "gcc" "CMakeFiles/server_CP.dir/server_CP.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "include"
+  "jsoncpp"
   )
 
 # Targets to which this target links.

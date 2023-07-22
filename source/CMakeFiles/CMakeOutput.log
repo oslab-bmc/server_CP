@@ -1,8 +1,7 @@
-The target system is: Linux -  - armv7ahf-vfpv4d16-KETI
-The host system is: Linux - 5.15.0-76-generic - x86_64
+The system is: Linux - 5.15.0-76-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc -march=armv7-a;-mfpu=vfpv4-d16;-mfloat-abi=hard;--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi
-Build flags: ;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Compiler: /usr/bin/cc 
+Build flags: 
 Id flags:  
 
 The output was:
@@ -11,11 +10,11 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/3.23.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/3.16.3/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ -march=armv7-a;-mfpu=vfpv4-d16;-mfloat-abi=hard;--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi
-Build flags: ;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Compiler: /usr/bin/c++ 
+Build flags: 
 Id flags:  
 
 The output was:
@@ -24,61 +23,81 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/3.23.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/keti/KETI_BMC/server_CP/source/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5d2dd/fast && /usr/bin/make -f CMakeFiles/cmTC_5d2dd.dir/build.make CMakeFiles/cmTC_5d2dd.dir/build
+make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d2dd.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5d2dd.dir/testCCompiler.c.o   -c /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5d2dd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d2dd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5d2dd.dir/testCCompiler.c.o  -o cmTC_5d2dd 
+make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
+
+
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_4dba5/fast && /usr/bin/make  -f CMakeFiles/cmTC_4dba5.dir/build.make CMakeFiles/cmTC_4dba5.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b867e/fast && /usr/bin/make -f CMakeFiles/cmTC_b867e.dir/build.make CMakeFiles/cmTC_b867e.dir/build
 make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi   -O2 -pipe -g -feliminate-unused-debug-types     -v -o CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -c /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCCompilerABI.c
+Building C object CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -v -o CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c
 Using built-in specs.
-COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc
-Target: arm-KETI-linux-gnueabi
-Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array
+COLLECT_GCC=/usr/bin/cc
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 12.1.0 (GCC) 
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_4dba5.dir/'
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/cc1 -quiet -v -isysroot /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4dba5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=vfpv4-d16 -mfloat-abi=hard -mtls-dialect=gnu -marm -mlibarch=armv7-a+vfpv4-d16 -march=armv7-a+vfpv4-d16 -g -O2 -version -feliminate-unused-debug-types -o - |
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/as -v -march=armv7-a+vfpv4-d16 -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o
-GNU assembler version 2.38 (arm-KETI-linux-gnueabi) using BFD version (GNU Binutils) 2.38.20220516
-GNU C17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)
-	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccFTkqih.s
+GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/include"
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/local/include"
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/../../../../../arm-KETI-linux-gnueabi/include"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed
- /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/
+ /usr/lib/gcc/x86_64-linux-gnu/9/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
 End of search list.
-GNU C17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)
-	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 84b974bdac21de7041ce46468291780e
-COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/
-LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_4dba5
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4dba5.dir/link.txt --verbose=1
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  -O2 -pipe -g -feliminate-unused-debug-types   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v -rdynamic CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -o cmTC_4dba5 
+Compiler executable checksum: c0c95c0b4209efec1c1892d5ff24030b
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o /tmp/ccFTkqih.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_b867e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b867e.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o  -o cmTC_b867e 
 Using built-in specs.
-COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc
-COLLECT_LTO_WRAPPER=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper
-Target: arm-KETI-linux-gnueabi
-Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 12.1.0 (GCC) 
-COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/
-LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_4dba5' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_4dba5.'
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2 -plugin /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so -plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2WMS0p.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4dba5 /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o -L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_4dba5' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_4dba5.'
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b867e' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAhYvCI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b867e /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b867e' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
 
 
@@ -86,102 +105,113 @@ make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMak
 Parsed C implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
   end of search list found
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include]
-  implicit include dirs: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include;/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/9/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-KETI-linux-gnueabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_4dba5/fast && /usr/bin/make  -f CMakeFiles/cmTC_4dba5.dir/build.make CMakeFiles/cmTC_4dba5.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_b867e/fast && /usr/bin/make -f CMakeFiles/cmTC_b867e.dir/build.make CMakeFiles/cmTC_b867e.dir/build]
   ignore line: [make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi   -O2 -pipe -g -feliminate-unused-debug-types     -v -o CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -c /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCCompilerABI.c]
+  ignore line: [Building C object CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc]
-  ignore line: [Target: arm-KETI-linux-gnueabi]
-  ignore line: [Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.1.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_4dba5.dir/']
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/cc1 -quiet -v -isysroot /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4dba5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=vfpv4-d16 -mfloat-abi=hard -mtls-dialect=gnu -marm -mlibarch=armv7-a+vfpv4-d16 -march=armv7-a+vfpv4-d16 -g -O2 -version -feliminate-unused-debug-types -o - |]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/as -v -march=armv7-a+vfpv4-d16 -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o]
-  ignore line: [GNU assembler version 2.38 (arm-KETI-linux-gnueabi) using BFD version (GNU Binutils) 2.38.20220516]
-  ignore line: [GNU C17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)]
-  ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.16/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccFTkqih.s]
+  ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/include"]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/local/include"]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/../../../../../arm-KETI-linux-gnueabi/include"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)]
-  ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 84b974bdac21de7041ce46468291780e]
-  ignore line: [COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/]
-  ignore line: [LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_4dba5]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4dba5.dir/link.txt --verbose=1]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  -O2 -pipe -g -feliminate-unused-debug-types   -Wl -O1 -Wl --hash-style=gnu -Wl --as-needed -v -rdynamic CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -o cmTC_4dba5 ]
+  ignore line: [Compiler executable checksum: c0c95c0b4209efec1c1892d5ff24030b]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o /tmp/ccFTkqih.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_b867e]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b867e.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o  -o cmTC_b867e ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-gcc]
-  ignore line: [COLLECT_LTO_WRAPPER=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper]
-  ignore line: [Target: arm-KETI-linux-gnueabi]
-  ignore line: [Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.1.0 (GCC) ]
-  ignore line: [COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/]
-  ignore line: [LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_4dba5' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_4dba5.']
-  link line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2 -plugin /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so -plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2WMS0p.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_4dba5 /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o -L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2] ==> ignore
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_b867e' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccAhYvCI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b867e /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc2WMS0p.res] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccAhYvCI.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-    arg [--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
     arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_4dba5] ==> ignore
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
-    arg [-O1] ==> ignore
+    arg [elf_x86_64] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_4dba5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_b867e] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
+    arg [CMakeFiles/cmTC_b867e.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -193,74 +223,98 @@ Parsed C implicit link information from above output:
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [--pop-state] ==> ignore
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9] ==> [/usr/lib/gcc/x86_64-linux-gnu/9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> [/usr/lib]
   implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-  implicit objs: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-  implicit dirs: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_aa708/fast && /usr/bin/make -f CMakeFiles/cmTC_aa708.dir/build.make CMakeFiles/cmTC_aa708.dir/build
+make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aa708.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_aa708.dir/testCXXCompiler.cxx.o -c /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_aa708
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa708.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_aa708.dir/testCXXCompiler.cxx.o  -o cmTC_aa708 
+make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
+
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_2d070/fast && /usr/bin/make  -f CMakeFiles/cmTC_2d070.dir/build.make CMakeFiles/cmTC_2d070.dir/build
+Run Build Command(s):/usr/bin/make cmTC_2a491/fast && /usr/bin/make -f CMakeFiles/cmTC_2a491.dir/build.make CMakeFiles/cmTC_2a491.dir/build
 make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi   -O2 -pipe -g -feliminate-unused-debug-types     -v -o CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -c /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp
+Building CXX object CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++    -v -o CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
 Using built-in specs.
-COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++
-Target: arm-KETI-linux-gnueabi
-Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array
+COLLECT_GCC=/usr/bin/c++
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 12.1.0 (GCC) 
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_2d070.dir/'
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/cc1plus -quiet -v -isysroot /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi -D_GNU_SOURCE /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2d070.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=vfpv4-d16 -mfloat-abi=hard -mtls-dialect=gnu -marm -mlibarch=armv7-a+vfpv4-d16 -march=armv7-a+vfpv4-d16 -g -O2 -version -feliminate-unused-debug-types -o - |
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/as -v -march=armv7-a+vfpv4-d16 -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o
-GNU assembler version 2.38 (arm-KETI-linux-gnueabi) using BFD version (GNU Binutils) 2.38.20220516
-GNU C++17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)
-	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccj6GS4e.s
+GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/include"
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/local/include"
-ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/../../../../../arm-KETI-linux-gnueabi/include"
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/9"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0
- /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi
- /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed
- /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/
+ /usr/include/c++/9
+ /usr/include/x86_64-linux-gnu/c++/9
+ /usr/include/c++/9/backward
+ /usr/lib/gcc/x86_64-linux-gnu/9/include
+ /usr/local/include
+ /usr/include/x86_64-linux-gnu
+ /usr/include
 End of search list.
-GNU C++17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)
-	compiled by GNU C version 12.1.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)
+	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 3209bfe851478a119756117fa8cb5798
-COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/
-LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.'
-Linking CXX executable cmTC_2d070
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d070.dir/link.txt --verbose=1
-/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  -O2 -pipe -g -feliminate-unused-debug-types   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed -v -rdynamic CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2d070 
+Compiler executable checksum: 65fe925b83d3956b533de4aaba7dace0
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccj6GS4e.s
+GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_2a491
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a491.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2a491 
 Using built-in specs.
-COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++
-COLLECT_LTO_WRAPPER=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper
-Target: arm-KETI-linux-gnueabi
-Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none:hsa
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-Supported LTO compression algorithms: zlib zstd
-gcc version 12.1.0 (GCC) 
-COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/
-LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_2d070' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_2d070.'
- /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2 -plugin /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so -plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvJnGlw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_2d070 /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o -L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o
-COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_2d070' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_2d070.'
+gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2a491' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrFVF4G.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2a491 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2a491' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp'
 
 
@@ -268,111 +322,123 @@ make[1]: Leaving directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMak
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-    add: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/]
+    add: [/usr/include/c++/9]
+    add: [/usr/include/x86_64-linux-gnu/c++/9]
+    add: [/usr/include/c++/9/backward]
+    add: [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+    add: [/usr/local/include]
+    add: [/usr/include/x86_64-linux-gnu]
+    add: [/usr/include]
   end of search list found
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-  collapse include dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include]
-  implicit include dirs: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward;/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include;/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include]
+  collapse include dir [/usr/include/c++/9] ==> [/usr/include/c++/9]
+  collapse include dir [/usr/include/x86_64-linux-gnu/c++/9] ==> [/usr/include/x86_64-linux-gnu/c++/9]
+  collapse include dir [/usr/include/c++/9/backward] ==> [/usr/include/c++/9/backward]
+  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/9/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/9/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/9;/usr/include/x86_64-linux-gnu/c++/9;/usr/include/c++/9/backward;/usr/lib/gcc/x86_64-linux-gnu/9/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(arm-KETI-linux-gnueabi-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_2d070/fast && /usr/bin/make  -f CMakeFiles/cmTC_2d070.dir/build.make CMakeFiles/cmTC_2d070.dir/build]
+  ignore line: [Run Build Command(s):/usr/bin/make cmTC_2a491/fast && /usr/bin/make -f CMakeFiles/cmTC_2a491.dir/build.make CMakeFiles/cmTC_2a491.dir/build]
   ignore line: [make[1]: Entering directory '/home/keti/KETI_BMC/server_CP/source/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi   -O2 -pipe -g -feliminate-unused-debug-types     -v -o CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -c /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Building CXX object CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++    -v -o CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++]
-  ignore line: [Target: arm-KETI-linux-gnueabi]
-  ignore line: [Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.1.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_2d070.dir/']
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/cc1plus -quiet -v -isysroot /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi -D_GNU_SOURCE /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2d070.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=vfpv4-d16 -mfloat-abi=hard -mtls-dialect=gnu -marm -mlibarch=armv7-a+vfpv4-d16 -march=armv7-a+vfpv4-d16 -g -O2 -version -feliminate-unused-debug-types -o - |]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/as -v -march=armv7-a+vfpv4-d16 -mfloat-abi=hard -mfpu=vfpv4-d16 -meabi=5 -o CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [GNU assembler version 2.38 (arm-KETI-linux-gnueabi) using BFD version (GNU Binutils) 2.38.20220516]
-  ignore line: [GNU C++17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)]
-  ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccj6GS4e.s]
+  ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/include"]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/local/include"]
-  ignore line: [ignoring nonexistent directory "/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/../../../../../arm-KETI-linux-gnueabi/include"]
+  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/9"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/backward]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/include-fixed]
-  ignore line: [ /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/]
+  ignore line: [ /usr/include/c++/9]
+  ignore line: [ /usr/include/x86_64-linux-gnu/c++/9]
+  ignore line: [ /usr/include/c++/9/backward]
+  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++17 (GCC) version 12.1.0 (arm-KETI-linux-gnueabi)]
-  ignore line: [	compiled by GNU C version 12.1.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+  ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.1) version 9.4.0 (x86_64-linux-gnu)]
+  ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 3209bfe851478a119756117fa8cb5798]
-  ignore line: [COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/]
-  ignore line: [LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [Linking CXX executable cmTC_2d070]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d070.dir/link.txt --verbose=1]
-  ignore line: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  -O2 -pipe -g -feliminate-unused-debug-types   -Wl -O1 -Wl --hash-style=gnu -Wl --as-needed -v -rdynamic CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_2d070 ]
+  ignore line: [Compiler executable checksum: 65fe925b83d3956b533de4aaba7dace0]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccj6GS4e.s]
+  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_2a491]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a491.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_2a491 ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++]
-  ignore line: [COLLECT_LTO_WRAPPER=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper]
-  ignore line: [Target: arm-KETI-linux-gnueabi]
-  ignore line: [Configured with: ../../../../../../work-shared/gcc-12.1.0-r0/gcc-12.1.0/configure --build=x86_64-linux --host=x86_64-oesdk-linux --target=arm-KETI-linux-gnueabi --prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --exec_prefix=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr --bindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --sbindir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi --libexecdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi --datadir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share --sysconfdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/etc --sharedstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/com --localstatedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/var --libdir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi --includedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --oldincludedir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/include --infodir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/info --mandir=/usr/local/oe-sdk-hardcoded-buildpath/sysroots/x86_64-oesdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-KETI-linux-gnueabi- --without-local-prefix --disable-install-libiberty --disable-libssp --enable-libitm --enable-lto --disable-bootstrap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/12.1.0 --with-build-time-tools=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot-native/usr/arm-KETI-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/home/keti/KETI_BMC/BMC_SDK/build/ast2600-keti/tmp/work/x86_64-nativesdk-oesdk-linux/gcc-cross-canadian-arm/12.1.0-r0/recipe-sysroot --enable-standard-branch-protection --enable-poison-system-directories --disable-static --enable-nls --with-glibc-version=2.28 --enable-initfini-array]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.1' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-Av3uEd/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-  ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 12.1.0 (GCC) ]
-  ignore line: [COMPILER_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/]
-  ignore line: [LIBRARY_PATH=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/:/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS= '-mfpu=vfpv4-d16' '-mfloat-abi=hard' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-rdynamic' '-o' 'cmTC_2d070' '-shared-libgcc' '-mtls-dialect=gnu' '-marm' '-mlibarch=armv7-a+vfpv4-d16' '-march=armv7-a+vfpv4-d16' '-dumpdir' 'cmTC_2d070.']
-  link line: [ /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2 -plugin /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so -plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvJnGlw.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_2d070 /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o -L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0 -L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib -O1 --hash-style=gnu --as-needed CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/collect2] ==> ignore
+  ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_2a491' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrFVF4G.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2a491 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/libexec/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccvJnGlw.res] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccrFVF4G.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi] ==> ignore
     arg [--build-id] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [-export-dynamic] ==> ignore
-    arg [-dynamic-linker] ==> ignore
-    arg [/lib/ld-linux-armhf.so.3] ==> ignore
-    arg [-X] ==> ignore
     arg [-m] ==> ignore
-    arg [armelf_linux_eabi] ==> ignore
-    arg [-o] ==> ignore
-    arg [cmTC_2d070] ==> ignore
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0]
-    arg [-L/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib] ==> dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
-    arg [-O1] ==> ignore
+    arg [elf_x86_64] ==> ignore
     arg [--hash-style=gnu] ==> ignore
     arg [--as-needed] ==> ignore
-    arg [CMakeFiles/cmTC_2d070.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_2a491] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
+    arg [CMakeFiles/cmTC_2a491.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -380,15 +446,18 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o]
-    arg [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o] ==> obj [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0] ==> [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0]
-  collapse library dir [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib] ==> [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9] ==> [/usr/lib/gcc/x86_64-linux-gnu/9]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> [/usr/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit objs: [/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crt1.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crti.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtbegin.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0/crtend.o;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/crtn.o]
-  implicit dirs: [/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/lib/arm-KETI-linux-gnueabi/gcc/arm-KETI-linux-gnueabi/12.1.0;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/lib;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib/arm-KETI-linux-gnueabi/12.1.0;/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/lib]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
   implicit fwks: []
 
 
