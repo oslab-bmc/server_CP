@@ -10,8 +10,8 @@ set(
 )
 
 set(ROOT_DIR /home/keti/KETI_BMC)
-set(PROJECT_DIR ${ROOT_DIR}/source)
-set(JSON_IDR ${PROJECT_DIR}/jsoncpp)
+set(PROJECT_DIR ${ROOT_DIR}/server_CP/source)
+set(JSON_INC ${PROJECT_DIR}/jsoncpp)
 #라이브러리 경로
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR arm)
@@ -27,7 +27,7 @@ message(STATUS " - Version  \t: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS " - Path     \t: ${CMAKE_CXX_COMPILER}")
 
 include_directories(
-    ${PROJECT_DIR}
+    ${JSON_INC}
 )
 
 # # Source

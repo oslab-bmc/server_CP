@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/keti/KETI_BMC/source/server_CP.cpp" "CMakeFiles/server_CP.dir/server_CP.o" "gcc" "CMakeFiles/server_CP.dir/server_CP.o.d"
+  "/home/keti/KETI_BMC/server_CP/source/server_CP.cpp" "CMakeFiles/server_CP.dir/server_CP.o" "gcc" "CMakeFiles/server_CP.dir/server_CP.o.d"
   )
 
 # Targets to which this target links.

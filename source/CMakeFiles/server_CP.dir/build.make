@@ -53,10 +53,10 @@ RM = /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/keti/KETI_BMC/source
+CMAKE_SOURCE_DIR = /home/keti/KETI_BMC/server_CP/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/keti/KETI_BMC/source
+CMAKE_BINARY_DIR = /home/keti/KETI_BMC/server_CP/source
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server_CP.dir/depend.make
@@ -72,16 +72,16 @@ include CMakeFiles/server_CP.dir/flags.make
 CMakeFiles/server_CP.dir/server_CP.o: CMakeFiles/server_CP.dir/flags.make
 CMakeFiles/server_CP.dir/server_CP.o: server_CP.cpp
 CMakeFiles/server_CP.dir/server_CP.o: CMakeFiles/server_CP.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keti/KETI_BMC/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_CP.dir/server_CP.o"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server_CP.dir/server_CP.o -MF CMakeFiles/server_CP.dir/server_CP.o.d -o CMakeFiles/server_CP.dir/server_CP.o -c /home/keti/KETI_BMC/source/server_CP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/server_CP.dir/server_CP.o"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server_CP.dir/server_CP.o -MF CMakeFiles/server_CP.dir/server_CP.o.d -o CMakeFiles/server_CP.dir/server_CP.o -c /home/keti/KETI_BMC/server_CP/source/server_CP.cpp
 
 CMakeFiles/server_CP.dir/server_CP.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_CP.dir/server_CP.i"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keti/KETI_BMC/source/server_CP.cpp > CMakeFiles/server_CP.dir/server_CP.i
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keti/KETI_BMC/server_CP/source/server_CP.cpp > CMakeFiles/server_CP.dir/server_CP.i
 
 CMakeFiles/server_CP.dir/server_CP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_CP.dir/server_CP.s"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/source/server_CP.cpp -o CMakeFiles/server_CP.dir/server_CP.s
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++   -march=armv7-a -mfpu=vfpv4-d16 -mfloat-abi=hard --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/server_CP/source/server_CP.cpp -o CMakeFiles/server_CP.dir/server_CP.s
 
 # Object files for target server_CP
 server_CP_OBJECTS = \
@@ -93,7 +93,7 @@ server_CP_EXTERNAL_OBJECTS =
 server_CP: CMakeFiles/server_CP.dir/server_CP.o
 server_CP: CMakeFiles/server_CP.dir/build.make
 server_CP: CMakeFiles/server_CP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keti/KETI_BMC/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server_CP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable server_CP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_CP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -105,6 +105,6 @@ CMakeFiles/server_CP.dir/clean:
 .PHONY : CMakeFiles/server_CP.dir/clean
 
 CMakeFiles/server_CP.dir/depend:
-	cd /home/keti/KETI_BMC/source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/keti/KETI_BMC/source /home/keti/KETI_BMC/source /home/keti/KETI_BMC/source /home/keti/KETI_BMC/source /home/keti/KETI_BMC/source/CMakeFiles/server_CP.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/keti/KETI_BMC/server_CP/source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/keti/KETI_BMC/server_CP/source /home/keti/KETI_BMC/server_CP/source /home/keti/KETI_BMC/server_CP/source /home/keti/KETI_BMC/server_CP/source /home/keti/KETI_BMC/server_CP/source/CMakeFiles/server_CP.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server_CP.dir/depend
 

@@ -1,5 +1,5 @@
 CMakeFiles/server_CP.dir/server_CP.o: \
- /home/keti/KETI_BMC/source/server_CP.cpp \
+ /home/keti/KETI_BMC/server_CP/source/server_CP.cpp \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/stdc-predef.h \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/iostream \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/arm-KETI-linux-gnueabi/bits/c++config.h \
@@ -1097,10 +1097,10 @@ CMakeFiles/server_CP.dir/server_CP.o: \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/boost/asio/ssl/detail/read_op.hpp \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/boost/asio/ssl/detail/shutdown_op.hpp \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/boost/asio/ssl/detail/write_op.hpp \
- /home/keti/KETI_BMC/source/json/json.h \
+ /home/keti/KETI_BMC/server_CP/source/json/json.h \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/stack \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/bits/stl_stack.h \
- /home/keti/KETI_BMC/source/jsoncpp.cpp \
+ /home/keti/KETI_BMC/server_CP/source/jsoncpp.cpp \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/set \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/bits/stl_set.h \
  /home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi/usr/include/c++/12.1.0/bits/stl_multiset.h \

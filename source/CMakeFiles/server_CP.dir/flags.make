@@ -4,7 +4,7 @@
 # compile CXX with /home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/keti/KETI_BMC/source
+CXX_INCLUDES = -I/home/keti/KETI_BMC/server_CP/source/jsoncpp
 
 CXX_FLAGS = -lboost_system -lcrypto -lssl -lcpprest -pthread -std=c++17
 
