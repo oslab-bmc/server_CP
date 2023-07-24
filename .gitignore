@@ -1,5 +1,5 @@
-*/CMakeFiles/
-*/CMakeCache.txt
-*/*.cmake
-*/Makefile
-*/output
+**/CMakeFiles/
+**/CMakeCache.txt
+**/*.cmake
+**/Makefile
+**/output
