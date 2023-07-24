@@ -1,3 +1,0 @@
-/home/keti/KETI_BMC/server_CP/source/CMakeFiles/rebuild_cache.dir
-/home/keti/KETI_BMC/server_CP/source/CMakeFiles/edit_cache.dir
-/home/keti/KETI_BMC/server_CP/source/CMakeFiles/server_CP.dir

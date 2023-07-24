@@ -9,6 +9,7 @@ set(
     server_CP.cpp
     process_reading.cpp
     handler.cpp
+    sys_reading.cpp
 )
 
 set(ROOT_DIR /home/keti/KETI_BMC)
