@@ -74,12 +74,12 @@ clean: CMakeFiles/server_CP.dir/clean
 CMakeFiles/server_CP.dir/all:
 	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/depend
 	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=1,2,3 "Built target server_CP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=1,2,3,4 "Built target server_CP"
 .PHONY : CMakeFiles/server_CP.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/server_CP.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/KETI_BMC/server_CP/source/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/KETI_BMC/server_CP/source/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/server_CP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/keti/KETI_BMC/server_CP/source/CMakeFiles 0
 .PHONY : CMakeFiles/server_CP.dir/rule

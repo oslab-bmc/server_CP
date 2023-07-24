@@ -6,5 +6,5 @@ CXX_FLAGS = -lboost_system -lcrypto -lssl -lcpprest -pthread -std=c++17 -march=a
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/keti/KETI_BMC/server_CP/source/include -I/home/keti/KETI_BMC/server_CP/source/jsoncpp 
+CXX_INCLUDES = -I/home/keti/KETI_BMC/server_CP/source/include 
 

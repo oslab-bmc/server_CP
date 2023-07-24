@@ -70,36 +70,52 @@ CMakeFiles/server_CP.dir/server_CP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_CP.dir/server_CP.s"
 	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/server_CP/source/server_CP.cpp -o CMakeFiles/server_CP.dir/server_CP.s
 
-CMakeFiles/server_CP.dir/jsoncpp.o: CMakeFiles/server_CP.dir/flags.make
-CMakeFiles/server_CP.dir/jsoncpp.o: jsoncpp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_CP.dir/jsoncpp.o"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_CP.dir/jsoncpp.o -c /home/keti/KETI_BMC/server_CP/source/jsoncpp.cpp
+CMakeFiles/server_CP.dir/process_reading.o: CMakeFiles/server_CP.dir/flags.make
+CMakeFiles/server_CP.dir/process_reading.o: process_reading.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server_CP.dir/process_reading.o"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_CP.dir/process_reading.o -c /home/keti/KETI_BMC/server_CP/source/process_reading.cpp
 
-CMakeFiles/server_CP.dir/jsoncpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_CP.dir/jsoncpp.i"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keti/KETI_BMC/server_CP/source/jsoncpp.cpp > CMakeFiles/server_CP.dir/jsoncpp.i
+CMakeFiles/server_CP.dir/process_reading.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_CP.dir/process_reading.i"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keti/KETI_BMC/server_CP/source/process_reading.cpp > CMakeFiles/server_CP.dir/process_reading.i
 
-CMakeFiles/server_CP.dir/jsoncpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_CP.dir/jsoncpp.s"
-	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/server_CP/source/jsoncpp.cpp -o CMakeFiles/server_CP.dir/jsoncpp.s
+CMakeFiles/server_CP.dir/process_reading.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_CP.dir/process_reading.s"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/server_CP/source/process_reading.cpp -o CMakeFiles/server_CP.dir/process_reading.s
+
+CMakeFiles/server_CP.dir/handler.o: CMakeFiles/server_CP.dir/flags.make
+CMakeFiles/server_CP.dir/handler.o: handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server_CP.dir/handler.o"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/server_CP.dir/handler.o -c /home/keti/KETI_BMC/server_CP/source/handler.cpp
+
+CMakeFiles/server_CP.dir/handler.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/server_CP.dir/handler.i"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/keti/KETI_BMC/server_CP/source/handler.cpp > CMakeFiles/server_CP.dir/handler.i
+
+CMakeFiles/server_CP.dir/handler.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/server_CP.dir/handler.s"
+	/home/keti/KETI_BMC/SDK/sysroots/x86_64-oesdk-linux/usr/bin/arm-KETI-linux-gnueabi/arm-KETI-linux-gnueabi-g++ --sysroot=/home/keti/KETI_BMC/SDK/sysroots/armv7ahf-vfpv4d16-KETI-linux-gnueabi $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/keti/KETI_BMC/server_CP/source/handler.cpp -o CMakeFiles/server_CP.dir/handler.s
 
 # Object files for target server_CP
 server_CP_OBJECTS = \
 "CMakeFiles/server_CP.dir/server_CP.o" \
-"CMakeFiles/server_CP.dir/jsoncpp.o"
+"CMakeFiles/server_CP.dir/process_reading.o" \
+"CMakeFiles/server_CP.dir/handler.o"
 
 # External object files for target server_CP
 server_CP_EXTERNAL_OBJECTS =
 
-server_CP: CMakeFiles/server_CP.dir/server_CP.o
-server_CP: CMakeFiles/server_CP.dir/jsoncpp.o
-server_CP: CMakeFiles/server_CP.dir/build.make
-server_CP: CMakeFiles/server_CP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable server_CP"
+output/bin/server_CP: CMakeFiles/server_CP.dir/server_CP.o
+output/bin/server_CP: CMakeFiles/server_CP.dir/process_reading.o
+output/bin/server_CP: CMakeFiles/server_CP.dir/handler.o
+output/bin/server_CP: CMakeFiles/server_CP.dir/build.make
+output/bin/server_CP: output/lib/libjsoncpp.a
+output/bin/server_CP: CMakeFiles/server_CP.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/keti/KETI_BMC/server_CP/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable output/bin/server_CP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server_CP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/server_CP.dir/build: server_CP
+CMakeFiles/server_CP.dir/build: output/bin/server_CP
 
 .PHONY : CMakeFiles/server_CP.dir/build
 

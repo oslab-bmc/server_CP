@@ -7,7 +7,8 @@ set(
 set(
     SOURCE_FILES #아래 코드들 SOURCE_FILES 변수로 묶음.
     server_CP.cpp
-    jsoncpp.cpp
+    process_reading.cpp
+    handler.cpp
 )
 
 set(ROOT_DIR /home/keti/KETI_BMC)
@@ -28,10 +29,13 @@ message(STATUS "Compiler")
 message(STATUS " - ID       \t: ${CMAKE_CXX_COMPILER_ID}")
 message(STATUS " - Version  \t: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS " - Path     \t: ${CMAKE_CXX_COMPILER}")
-
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_DIR}/output/bin)
 include_directories(
     ${PROJECT_INC}
-    ${JSON_DIR}
 )
 
 add_executable(${OUTPUT}  ${SOURCE_FILES})
+
+target_link_libraries( ${OUTPUT}
+    ${PROJECT_DIR}/output/lib/libjsoncpp.a
+)

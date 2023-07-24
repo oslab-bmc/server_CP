@@ -1,0 +1,5 @@
+**/CMakeFiles/
+CMakeCache.txt
+**/*.cmake
+**/Makefile
+*/output

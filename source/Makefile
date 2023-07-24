@@ -124,19 +124,34 @@ server_CP/fast:
 .PHONY : server_CP/fast
 
 # target to build an object file
-jsoncpp.o:
-	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/jsoncpp.o
-.PHONY : jsoncpp.o
+handler.o:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/handler.o
+.PHONY : handler.o
 
 # target to preprocess a source file
-jsoncpp.i:
-	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/jsoncpp.i
-.PHONY : jsoncpp.i
+handler.i:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/handler.i
+.PHONY : handler.i
 
 # target to generate assembly for a file
-jsoncpp.s:
-	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/jsoncpp.s
-.PHONY : jsoncpp.s
+handler.s:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/handler.s
+.PHONY : handler.s
+
+# target to build an object file
+process_reading.o:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/process_reading.o
+.PHONY : process_reading.o
+
+# target to preprocess a source file
+process_reading.i:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/process_reading.i
+.PHONY : process_reading.i
+
+# target to generate assembly for a file
+process_reading.s:
+	$(MAKE) -f CMakeFiles/server_CP.dir/build.make CMakeFiles/server_CP.dir/process_reading.s
+.PHONY : process_reading.s
 
 # target to build an object file
 server_CP.o:
@@ -162,9 +177,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... server_CP"
-	@echo "... jsoncpp.o"
-	@echo "... jsoncpp.i"
-	@echo "... jsoncpp.s"
+	@echo "... handler.o"
+	@echo "... handler.i"
+	@echo "... handler.s"
+	@echo "... process_reading.o"
+	@echo "... process_reading.i"
+	@echo "... process_reading.s"
 	@echo "... server_CP.o"
 	@echo "... server_CP.i"
 	@echo "... server_CP.s"
