@@ -15,7 +15,7 @@ using std::thread;
 using namespace std;
 //////////////////Set server base url//////////////////////////
 //#define SERVER_ADDR "http://192.168.0.101:8000"
-#define SERVER_ADDR "http://0.0.0.0:8000"
+#define SERVER_ADDR "http://0.0.0.0:4000"
 //////////////////////////////////////////////////////////////
 
 struct stJiffies

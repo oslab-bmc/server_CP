@@ -1,5 +1,6 @@
 #include "server_CP.hpp"
 #include "handler.hpp"
+#include "process_reading.hpp"
 
 vector<string> split(string input, char delimiter) {
     vector<string> answer;
@@ -14,6 +15,7 @@ vector<string> split(string input, char delimiter) {
 int main()
 {
     // http_listener listener(U(SERVER_ADDR)); // Server URL, Port 지정.
+    find_process();
     unique_ptr<P_handler> http_listener;
     http_listener = unique_ptr<P_handler>(new P_handler(U(SERVER_ADDR)));
 

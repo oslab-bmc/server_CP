@@ -5,7 +5,7 @@
 
 int fan_status = 0;
 
-//cpu 사용량
+// cpu 사용량
 
 stJiffies prevJiffies;
 stJiffies curJiffies;
@@ -16,60 +16,56 @@ int cpu_calc_flag = 0;
 
 void cpu_calc(void)
 {
-        FILE *pStat = NULL;
-        char cpuID[6] = {0};
-        
+    FILE *pStat = NULL;
+    char cpuID[6] = {0};
 
-        while(cpu_calc_flag)
-        {
-                pStat = fopen("/proc/stat", "r");
-                fscanf(pStat, "%s %d %d %d %d", cpuID, &curJiffies.user,
-                        &curJiffies.nice, &curJiffies.system, &curJiffies.idle);
+    while (cpu_calc_flag)
+    {
+        pStat = fopen("/proc/stat", "r");
+        fscanf(pStat, "%s %d %d %d %d", cpuID, &curJiffies.user,
+               &curJiffies.nice, &curJiffies.system, &curJiffies.idle);
 
-                diffJiffies.user =  curJiffies.user - prevJiffies.user;
-                diffJiffies.nice =  curJiffies.nice - prevJiffies.nice;
-                diffJiffies.system =  curJiffies.system - prevJiffies.system;
-                diffJiffies.idle =  curJiffies.idle - prevJiffies.idle;
+        diffJiffies.user = curJiffies.user - prevJiffies.user;
+        diffJiffies.nice = curJiffies.nice - prevJiffies.nice;
+        diffJiffies.system = curJiffies.system - prevJiffies.system;
+        diffJiffies.idle = curJiffies.idle - prevJiffies.idle;
 
-                totalJiffies = diffJiffies.user + diffJiffies.nice + diffJiffies.system + diffJiffies.idle;
+        totalJiffies = diffJiffies.user + diffJiffies.nice + diffJiffies.system + diffJiffies.idle;
 
-                printf("Cpu usage : %.2f%%\n", 100.0f * ( 1.0-(diffJiffies.idle / (double) totalJiffies) ) );
+        printf("Cpu usage : %.2f%%\n", 100.0f * (1.0 - (diffJiffies.idle / (double)totalJiffies)));
 
-                prevJiffies = curJiffies;
-                fclose(pStat);
-                sleep(1);
-        }
+        prevJiffies = curJiffies;
+        fclose(pStat);
+        sleep(1);
+    }
 }
 
-P_handler::P_handler(utility::string_t url) : listener(url) {
+P_handler::P_handler(utility::string_t url) : listener(url)
+{
     TRACE(L"\nstarting to listen ");
 
-    listener.support(methods::GET, [this](http_request request) {
-        handleGet(request);
-    });
+    listener.support(methods::GET, [this](http_request request)
+                     { handleGet(request); });
 
-    listener.support(methods::POST, [this](http_request request) {
-        handlePost(request);
-    });
+    listener.support(methods::POST, [this](http_request request)
+                     { handlePost(request); });
 
-    listener.support(methods::DEL, [this](http_request request) {
-        handleDelete(request);
-    });
+    listener.support(methods::DEL, [this](http_request request)
+                     { handleDelete(request); });
 
-    listener.support(methods::PUT, [this](http_request request) {
-        handlePut(request);
-    });
+    listener.support(methods::PUT, [this](http_request request)
+                     { handlePut(request); });
 
-    listener.support(methods::PATCH, [this](http_request request) {
-        handlePatch(request);
-    });
+    listener.support(methods::PATCH, [this](http_request request)
+                     { handlePatch(request); });
 }
 
 void P_handler::handleGet(http_request request)
 {
     string pp = uri::decode(request.relative_uri().path());
     auto path = uri::split_path(pp);
-
+    if (!path.empty())
+        wcout << path[0].c_str();
     if (!path.empty() && path[0] == "fan")
     {
         // TODO: fan정보 리턴 구현
@@ -78,19 +74,20 @@ void P_handler::handleGet(http_request request)
         response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
         response.set_body(U(fan_status));
         sleep(1);
-        //request.reply(status_codes::OK, );
+        // request.reply(status_codes::OK, );
         request.reply(response);
     }
-    else if(!path.empty() && path[0] == "request" && path[1] == "report"){
+    else if (!path.empty() && path[0] == "request" && path[1] == "report")
+    {
         std::ifstream json_file;
-        json_file.open("./output.json", std::ifstream::in|std::ifstream::binary);
+        json_file.open("./output.json", std::ifstream::in | std::ifstream::binary);
         // 이처럼 open함수를 이용할 수 있으며, open mode는 | 연산자를 이용하여 여러 모드 가능
-        
+
         string str;
         Json::Value root;
         json_file >> root;
         json_file.close();
-        
+
         Json::StyledWriter writer;
         str = writer.write(root);
 
@@ -100,7 +97,7 @@ void P_handler::handleGet(http_request request)
         request.reply(response);
     }
     else if (!path.empty() && path[0] == "cpuinfo" && path[1] == "on")
-    {   
+    {
         TRACE(L"\n/[GET] :: cpuinfo\n");
         string readline;
         string k, v;
@@ -113,37 +110,44 @@ void P_handler::handleGet(http_request request)
         ifstream file("/proc/cpuinfo");
         if (file.is_open())
         {
-            while(getline(file, readline)){
+            while (getline(file, readline))
+            {
 
-                readline.erase(std::remove_if(readline.begin(), readline.end(), [](unsigned char x) {return std::isspace(x);}), readline.end());
+                readline.erase(std::remove_if(readline.begin(), readline.end(), [](unsigned char x)
+                                              { return std::isspace(x); }),
+                               readline.end());
 
-                if((pos = readline.find(delimiter)) != std::string::npos){
+                if ((pos = readline.find(delimiter)) != std::string::npos)
+                {
                     k = readline.substr(0, pos);
-                    readline.erase(0, pos+delimiter.length());
+                    readline.erase(0, pos + delimiter.length());
                     v = readline;
-                    cout << "Key: "<<k << "\tValue: "<<v<< "\nkey is processor?  "<<(k.compare("processor") ? "NO\t" : "YES\t")<<"result: "<<k.compare("processor")<<endl;
-
+                    cout << "Key: " << k << "\tValue: " << v << "\nkey is processor?  " << (k.compare("processor") ? "NO\t" : "YES\t") << "result: " << k.compare("processor") << endl;
                 }
 
-                if(k.compare("Hardware")==0){
+                if (k.compare("Hardware") == 0)
+                {
                     index == 99;
-                }else if(index == 99){
+                }
+                else if (index == 99)
+                {
                     jsonEtc[k] = v;
                     continue;
                 }
-                else if(k.compare("processor") == 0){
+                else if (k.compare("processor") == 0)
+                {
 
-                    if(index != stoi(v)){
+                    if (index != stoi(v))
+                    {
                         Json::StyledWriter writer;
                         str = writer.write(root);
-                        cout<<"jsonCore"<<endl;
-                        jsonCPU["processor "+v] = jsonCore;
-                    }                 
-                    cout<<"processor: "<<(index != stoi(v)) << "index: "<< index << "v" << stoi(v)<<endl;
+                        cout << "jsonCore" << endl;
+                        jsonCPU["processor " + v] = jsonCore;
+                    }
+                    cout << "processor: " << (index != stoi(v)) << "index: " << index << "v" << stoi(v) << endl;
                     index = stoi(v);
                 }
-                jsonCore[k] = v;    //key : value --> ex) model: am7v~~D
-
+                jsonCore[k] = v; // key : value --> ex) model: am7v~~D
             }
             file.close();
             root["CPU"] = jsonCPU;
@@ -158,51 +162,65 @@ void P_handler::handleGet(http_request request)
         response.set_body(U(str));
         request.reply(response);
     }
-    else if(!path.empty() && path[0] == "stat_mem" && path[1] == "result")
+    else if (!path.empty() && path[0] == "stat_mem" && path[1] == "result")
     {
-        string indexArry[10] = {"user", "nice", "system", "idle", "iowait","irq","softirq","steal","guest","guest_nice"};
-        string readLine, readLine2, k, v, delimiter =":", str;  
+        string indexArry[10] = {"user", "nice", "system", "idle", "iowait", "irq", "softirq", "steal", "guest", "guest_nice"};
+        string readLine, readLine2, k, v, delimiter = ":", str;
         size_t pos = 0;
-        int64_t index = 0; 
-        
+        int64_t index = 0;
+
         Json::Value root, cpu_usage_data, memory_usage_data, semi;
 
         ifstream file("/proc/stat");
-        
-        if(file.is_open()){
-            while(getline(file, readLine)){
-                
-                if(readLine.find("intr") == string::npos){
+
+        if (file.is_open())
+        {
+            while (getline(file, readLine))
+            {
+
+                if (readLine.find("intr") == string::npos)
+                {
                     vector<string> result = split(readLine, ' ');
-                    readLine2 = readLine.erase(0,result[0].length());
+                    readLine2 = readLine.erase(0, result[0].length());
                     vector<string> result2 = split(readLine, ' ');
-                    if(result2.size() == 11){
-                    for(int i = 0; i < 10; i++){
-                        semi[indexArry[i]] = result2.at(i+1);
+                    if (result2.size() == 11)
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            semi[indexArry[i]] = result2.at(i + 1);
+                        }
                     }
-                    }else{
+                    else
+                    {
                         // int j = 0;
-                        for(int i = 0; i < 10; i++){
-                            semi[indexArry[i]] = result2.at(i+2);
+                        for (int i = 0; i < 10; i++)
+                        {
+                            semi[indexArry[i]] = result2.at(i + 2);
                         }
                     }
                     cpu_usage_data[result[0]] = semi;
-                }else{
+                }
+                else
+                {
                     break;
                 }
+            }
 
-            }       
-            
-            file.close(); 
+            file.close();
         }
         ifstream file2("/proc/meminfo");
         readLine = "";
-        if(file2.is_open()){
-            while(getline(file2, readLine)){
-                readLine.erase(std::remove_if(readLine.begin(), readLine.end(), [](unsigned char x) {return std::isspace(x);}), readLine.end());
-                if((pos = readLine.find(delimiter)) != std::string::npos){
+        if (file2.is_open())
+        {
+            while (getline(file2, readLine))
+            {
+                readLine.erase(std::remove_if(readLine.begin(), readLine.end(), [](unsigned char x)
+                                              { return std::isspace(x); }),
+                               readLine.end());
+                if ((pos = readLine.find(delimiter)) != std::string::npos)
+                {
                     k = readLine.substr(0, pos);
-                    readLine.erase(0, pos+delimiter.length());
+                    readLine.erase(0, pos + delimiter.length());
                     v = readLine;
                 }
                 memory_usage_data[k] = v;
@@ -210,13 +228,15 @@ void P_handler::handleGet(http_request request)
 
             root["memory"] = memory_usage_data;
             file2.close();
-        }else{
-            cout<<"file open fail";
+        }
+        else
+        {
+            cout << "file open fail";
             // return 1;
         }
-        //meminfo
+        // meminfo
         root["stat_result"] = cpu_usage_data;
-        //root["memory"] = memory_usage_data;
+        // root["memory"] = memory_usage_data;
 
         Json::StyledWriter writer;
         str = writer.write(root);
@@ -226,59 +246,70 @@ void P_handler::handleGet(http_request request)
         response.set_body(U(str));
         request.reply(response);
     }
-    else if(!path.empty() && path[0] == "cpu" && path[1] == "usage"){
+    else if (!path.empty() && path[0] == "cpu" && path[1] == "usage")
+    {
         TRACE(L"\n/CPU_USAGE %\n");
-
-        if(flag == 0){
-            string indexArry[10] = {"user", "nice", "system", "idle", "iowait","irq","softirq","steal","guest","guest_nice"};
-            string readLine, readLine2, k, v, delimiter =":", str;  
+        if (flag == 0)
+        {
+            string indexArry[10] = {"user", "nice", "system", "idle", "iowait", "irq", "softirq", "steal", "guest", "guest_nice"};
+            string readLine, readLine2, k, v, delimiter = ":", str;
             Json::Value root, semi;
             ifstream file("/proc/stat");
-        
-            if(file.is_open()){
-                while(getline(file, readLine)){
-                
-                    if(readLine.find("intr") == string::npos){
+
+            if (file.is_open())
+            {
+                while (getline(file, readLine))
+                {
+
+                    if (readLine.find("intr") == string::npos)
+                    {
                         vector<string> result = split(readLine, ' ');
-                        readLine2 = readLine.erase(0,result[0].length());
+                        readLine2 = readLine.erase(0, result[0].length());
                         vector<string> result2 = split(readLine, ' ');
-                        if(result2.size() == 11){
-                        for(int i = 0; i < 10; i++){
-                            semi[indexArry[i]] = result2.at(i+1);
+                        if (result2.size() == 11)
+                        {
+                            for (int i = 0; i < 10; i++)
+                            {
+                                semi[indexArry[i]] = result2.at(i + 1);
+                            }
                         }
-                        }else{
+                        else
+                        {
                             // int j = 0;
-                            for(int i = 0; i < 10; i++){
-                                semi[indexArry[i]] = result2.at(i+2);
+                            for (int i = 0; i < 10; i++)
+                            {
+                                semi[indexArry[i]] = result2.at(i + 2);
                             }
                         }
                         root[result[0]] = semi;
-                    }else{
+                    }
+                    else
+                    {
                         break;
                     }
+                }
 
-                }       
-                
-                file.close(); 
+                file.close();
                 Json::StyledWriter writer;
                 str = writer.write(root);
-
             }
-        
+
             cpu_calc_flag = 1;
             thread t1(cpu_calc);
 
             t1.detach();
             flag = flag + 1;
-  
+
             http_response response(status_codes::OK);
             response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
             response.set_body(U(str));
             request.reply(response);
-        }else{
+        }
+        else
+        {
             Json::Value root;
             string str;
-            root["usage"] = ("Cpu usage : %.2f%%\n", 100.0f * ( 1.0-(diffJiffies.idle / (double) totalJiffies) ));
+            root["usage"] = ("Cpu usage : %.2f%%\n", 100.0f * (1.0 - (diffJiffies.idle / (double)totalJiffies)));
             Json::StyledWriter writer;
             str = writer.write(root);
 
@@ -287,26 +318,23 @@ void P_handler::handleGet(http_request request)
             response.set_body(U(str));
             request.reply(response);
         }
-        
     }
     else
-        {
-            TRACE(L"\n/fanERRRRRRRRRRRRR\n");
+    {
+        TRACE(L"\n/fanERRRRRRRRRRRRR\n");
 
-            request.reply(status_codes::NotFound, U("Err : please check the url\n"));
-        }
-        
-    
+        request.reply(status_codes::NotFound, U("Err : please check the url\n"));
+    }
 }
 
 void P_handler::handlePost(http_request request)
-{   
+{
     // clock_t start, end, result;
     // start = clock();
     // auto path = uri::split_path(uri::decode(request.relative_uri().path()));
     string pp = uri::decode(request.relative_uri().path());
     auto path = uri::split_path(pp);
-    
+
     if (!path.empty() && path[0] == "fan" && path[1] == "do")
     {
         // TODO: fan 시작 구현
@@ -332,10 +360,11 @@ void P_handler::handlePost(http_request request)
         request.reply(response);
         // request.reply(status_codes::OK, fan_status);
     }
-    else if(!path.empty() && path[0] == "cpu" && path[1] =="usagestop"){
-        //CPU 사용량 측정이 불필요할 때 호출
+    else if (!path.empty() && path[0] == "cpu" && path[1] == "usagestop")
+    {
+        // CPU 사용량 측정이 불필요할 때 호출
         TRACE(L"\n[POST] :: /cpu/usagestop\n");
-        
+
         flag = 0;
         cpu_calc_flag = 0;
 
@@ -348,7 +377,7 @@ void P_handler::handlePost(http_request request)
     {
         request.reply(status_codes::NotFound, U("Err : please check the url\n"));
     }
-    
+
     // end = clock();
     // result = (double) ((end - start));
     // request_cnt("POST", result, pp, to_string(status_codes::OK));

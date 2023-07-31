@@ -1,20 +1,9 @@
 // 프로세스 리딩
-#include<cstdio>
-#include<dirent.h>
-#include<sys/stat.h>//stat속성을 불러오기위함
-#include<string.h>//문자열 함수를 불러오기위함
-#include<stdlib.h>
-#include<sys/time.h>//time속성을 내장하고있는 헤더
-#include<time.h>
-#include<sys/types.h>
-#include<fcntl.h>//oflag를 사용하기위함
-#include <unistd.h>
-#include<sys/termios.h>
+#include "process_reading.hpp"
 
 #define FILE_MAX 4096
 #define FILE_MIN 128
 #define PARSING_COUNT 3
-void find_process();
 
 void status_parsing(char *);
 
@@ -34,9 +23,10 @@ void status_parsing(char *process_detail)
     if((parsing_Pointer = strstr(process_detail, "Pid:"))!=NULL){
         sscanf(parsing_Pointer, "Pid:\t%[^\n\r]", Pid);
     }
-    printf("%s\n",Name);
-    printf("%s\n",Pid);
-    printf("%s\n",State);
+    printf("\"%s | %s\", ",Pid, Name);
+    // printf("%s\n",Name);
+    // printf("%s\n",Pid);
+    // printf("%s\n",State);
     
 }
 
@@ -73,7 +63,7 @@ void find_process()
             }
             status_parsing(file_status);
 
-            exit(1);
+            //exit(1);
         }
     }
 }

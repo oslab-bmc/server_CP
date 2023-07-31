@@ -1,6 +1,6 @@
 set(
     OUTPUT#아래 코드를 OUTPUT 변수로 묶음
-    server_CP
+    server_CP_2
 )
 
 ## Source file
