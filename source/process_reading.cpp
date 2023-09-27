@@ -5,33 +5,38 @@
 #define FILE_MIN 128
 #define PARSING_COUNT 3
 
-void status_parsing(char *);
 
-void status_parsing(char *process_detail)
+void status_parsing(struct process_status *cur_proc)
 {
-    char Name[FILE_MIN] = "";
-    char Pid[FILE_MIN] = "";
-    char State[FILE_MIN] = "";
-
-    char *parsing_Pointer;
-    if((parsing_Pointer = strstr(process_detail, "Name:"))!=NULL){
-        sscanf(parsing_Pointer, "Name:\t%[^\n\r]", Name);
-    }
-    if((parsing_Pointer = strstr(process_detail, "State:"))!=NULL){
-        sscanf(parsing_Pointer, "State:\t%[^\n\r]", State);
-    }
-    if((parsing_Pointer = strstr(process_detail, "Pid:"))!=NULL){
-        sscanf(parsing_Pointer, "Pid:\t%[^\n\r]", Pid);
-    }
-    printf("\"%s | %s\", ",Pid, Name);
-    // printf("%s\n",Name);
-    // printf("%s\n",Pid);
-    // printf("%s\n",State);
     
+    char *parsing_Pointer;
+    char buf[FILE_MAX] = "";
+
+    if((parsing_Pointer = strstr(cur_proc->process_detail, "Name:"))!=NULL){
+        sscanf(parsing_Pointer, "Name:\t%[^\n\r]", buf);
+        string s(buf);
+        cur_proc->Name.push_back(s);
+        memset(buf,0,sizeof(buf));
+    }
+    if((parsing_Pointer = strstr(cur_proc->process_detail, "State:"))!=NULL){
+        sscanf(parsing_Pointer, "State:\t%[^\n\r]", buf);
+        string s(buf);
+        cur_proc->State.push_back(s);
+        memset(buf,0,sizeof(buf));
+    }
+    if((parsing_Pointer = strstr(cur_proc->process_detail, "Pid:"))!=NULL){
+        sscanf(parsing_Pointer, "Pid:\t%[^\n\r]", buf);
+        string s(buf);
+        cur_proc->Pid.push_back(s);
+        memset(buf,0,sizeof(buf));
+    }
+    string s = "!23";
+    cur_proc->cpu_usage.push_back(s);
+    cur_proc->mem_usage.push_back(s);
 }
 
 
-void find_process()
+int cur_process_status(struct process_status* cur_proc)
 {
     struct dirent **namelist;
     int count;
@@ -50,20 +55,26 @@ void find_process()
         if(S_ISDIR(sb.st_mode)==1){
             char *status_process_path = (char *)malloc(sizeof(char)*128);
             char status_buf[FILE_MAX] = "";
-            char file_status[FILE_MAX] = "";
+            memset(cur_proc->process_detail,0,sizeof(cur_proc->process_detail));
 
             strcpy(status_process_path,cur_process_dir);
             strcat(status_process_path,"/status");
             
             FILE *fp = fopen(status_process_path,"r");
-            int eof_check = 1;
+            if (fp == NULL) {
+                perror("Error opening file");
+                continue;
+            // 오류 처리
+            }
 
             while(fgets(status_buf, 4096, fp) != NULL){
-                strcat(file_status,status_buf);
+                strcat(cur_proc->process_detail,status_buf);
             }
-            status_parsing(file_status);
-
-            //exit(1);
+            status_parsing(cur_proc);
+            free(status_process_path);
+            fclose(fp);
         }
+        free(cur_process_dir);
     }
+    return -1;
 }

@@ -9,7 +9,25 @@
 #include<fcntl.h>//oflag를 사용하기위함
 #include <unistd.h>
 #include<sys/termios.h>
+#include<vector>
+#include<string>
+#include<iostream>
+
+using namespace std;
+
+#define FILE_MAX 4096
+#define FILE_MIN 128
+#define PARSING_COUNT 3
 
 
+struct process_status {
+    char process_detail[FILE_MAX];
+    vector<string> Name;
+    vector<string> Pid;
+    vector<string> State;
+    vector<string> cpu_usage;
+    vector<string> mem_usage;
+};
 
-void find_process();
+int cur_process_status(struct process_status *);
+void status_parsing(struct process_status *);

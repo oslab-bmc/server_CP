@@ -1,5 +1,6 @@
 #include "server_CP.hpp"
 #include "handler.hpp"
+#include "process_reading.hpp"
 
 #define TRACE(msg) wcout << msg
 
@@ -318,6 +319,35 @@ void P_handler::handleGet(http_request request)
             response.set_body(U(str));
             request.reply(response);
         }
+    }
+    else if(!path.empty() && path[0] == "process_info") //oslab 09.06
+    {
+        TRACE(L"\n/[GET] :: process_info\n");
+        struct process_status proc_info;
+        cur_process_status(&proc_info);
+
+        Json::Value response_json, root;
+        string str;
+
+        for(int i=1; i<=proc_info.Name.size();i++){
+            Json::Value processor;
+            processor[U("Name")] = proc_info.Name[i-1];
+            processor[U("State")] = proc_info.State[i-1];
+            processor[U("Pid")] = proc_info.Pid[i-1];
+            processor[U("cpu_usage")] = proc_info.cpu_usage[i-1];
+            processor[U("mem_usage")] = proc_info.mem_usage[i-1];
+
+            response_json["processor " + to_string(i)] = processor;
+        }
+        TRACE(L"\n/[GET] :: process_info\n");
+
+        Json::StyledWriter writer;
+        str = writer.write(response_json);
+        http_response response(status_codes::OK);
+        response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
+        response.set_body(U(str));
+
+        request.reply(response);
     }
     else
     {
