@@ -1,6 +1,7 @@
 #include "server_CP.hpp"
 #include "handler.hpp"
 #include "process_reading.hpp"
+#include "signal_reading.hpp"
 
 #define TRACE(msg) wcout << msg
 
@@ -349,6 +350,71 @@ void P_handler::handleGet(http_request request)
 
         request.reply(response);
     }
+    else if (!path.empty() && path[0] == "signal") {
+        TRACE(L"\n/SIGNAL\n");
+
+        string target = "server_CP";
+        string pid = find_pid(target);
+        string log_path = "./" + target + "_log.txt";
+
+        ifstream file(log_path);
+
+        if (!file.is_open()) {
+            cerr << "error for open" << log_path << endl;
+            exit(1);
+        }
+        
+        string line;
+        int i = 0;
+        Json::Value root, semi;
+
+        while (getline(file, line)) {
+            istringstream tmp(line);
+            vector<string> tokens;
+            string token;
+
+            while (getline(tmp, token, ' ')) {
+                if (!token.empty())
+                    tokens.push_back(token);
+            }
+            
+            if (tokens[2] == "---") {
+                // signaled by kernel
+                if (tokens[5].substr(8, 4) == "SI_K") { 
+                    semi["sender_pid"] = "kernel";
+                }
+                // signaled by user
+                else if (tokens[2] == "---" && !(tokens[3] == "killed")) {
+                    tokens[6].pop_back();
+                    semi["sender_pid"] = tokens[6].substr(7);
+                }
+            }
+            // SIGKILL
+            else if (tokens[3] == "killed") {
+                semi["sender_pid"] = "unknown";
+            } 
+            else {
+                continue;
+            }
+
+            string time = getTime(tokens[1]);
+
+            semi["time"] = time;
+            semi["signo"] = tokens[3];
+            semi["receiver_pid"] = tokens[0];
+            root["signal" + std::to_string(i)] = semi;
+            i++;
+        }
+
+        file.close();
+        Json::StyledWriter writer;
+        string res = writer.write(root);
+
+        http_response response(status_codes::OK);
+        response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
+        response.set_body(U(res));
+        request.reply(response);
+    } 
     else
     {
         TRACE(L"\n/fanERRRRRRRRRRRRR\n");

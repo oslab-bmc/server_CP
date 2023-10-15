@@ -1,23 +1,23 @@
 #include "server_CP.hpp"
 #include "handler.hpp"
 #include "process_reading.hpp"
-
-vector<string> split(string input, char delimiter) {
-    vector<string> answer;
-    stringstream ss(input);
-    string temp; 
-    while (getline(ss, temp, delimiter)) {
-        answer.push_back(temp);
-    } 
-    return answer;
-}
+#include "signal_reading.hpp"
 
 int main()
 {
     // http_listener listener(U(SERVER_ADDR)); // Server URL, Port 지정.
-    
     unique_ptr<P_handler> http_listener;
     http_listener = unique_ptr<P_handler>(new P_handler(U(SERVER_ADDR)));
+
+    // ojh - 12 ~ 33 라인 추가 및 수정
+    ignore_signals();
+
+    pthread_t log_thread;
+
+    if (pthread_create(&log_thread, NULL, init_thread, NULL) != 0) {
+        wcout << "Error creating thread\n" << endl;
+        exit(1);
+    }
 
     try
     {
@@ -26,10 +26,11 @@ int main()
         while (true)
             ;
     }
-    catch (exception const &e)
+    catch (std::exception const &e)
     {
         wcout << e.what() << endl;
     }
     http_listener->close();
+
     return 0;
 }

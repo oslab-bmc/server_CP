@@ -10,9 +10,11 @@ set(
     process_reading.cpp
     handler.cpp
     sys_reading.cpp
+    signal_reading.cpp
+
 )
 
-set(ROOT_DIR /home/keti/KETI_BMC)
+set(ROOT_DIR /home/oslab/KETI_BMC)
 set(PROJECT_DIR ${ROOT_DIR}/server_CP/source)
 set(PROJECT_INC ${PROJECT_DIR}/include)
 set(JSON_DIR ${PROJECT_DIR}/jsoncpp)
