@@ -312,6 +312,7 @@ void P_handler::handleGet(http_request request)
             Json::Value root;
             string str;
             root["usage"] = ("Cpu usage : %.2f%%\n", 100.0f * (1.0 - (diffJiffies.idle / (double)totalJiffies)));
+            root["Memory_usage"]=mem_reading();
             Json::StyledWriter writer;
             str = writer.write(root);
 
@@ -414,7 +415,30 @@ void P_handler::handleGet(http_request request)
         response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
         response.set_body(U(res));
         request.reply(response);
-    } 
+    }
+    else if(!path.empty() && path[0] == "bootgraph") //oslab 09.06
+    {
+        TRACE(L"\n/[GET] :: bootgraph\n");
+        std::string dmesg_log;
+        if(log_text(&dmesg_log)){
+            
+        }
+
+        Json::Value response_json, root;
+        string str;
+
+        response_json["dmesg"] = dmesg_log;
+
+        TRACE(L"\n/[GET] :: bootgraph\n");
+
+        Json::StyledWriter writer;
+        str = writer.write(response_json);
+        http_response response(status_codes::OK);
+        response.headers().add(U("Access-Control-Allow-Origin"), U("*"));
+        response.set_body(U(str));
+
+        request.reply(response);
+    }
     else
     {
         TRACE(L"\n/fanERRRRRRRRRRRRR\n");

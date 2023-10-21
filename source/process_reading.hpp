@@ -12,6 +12,7 @@
 #include<vector>
 #include<string>
 #include<iostream>
+#include<fstream>
 #include <sstream>
 
 using namespace std;
@@ -19,7 +20,6 @@ using namespace std;
 #define FILE_MAX 4096
 #define FILE_MIN 128
 #define PARSING_COUNT 3
-
 
 typedef struct proc_info {
 	int pid;			// /proc/pid/stat
@@ -51,3 +51,5 @@ vector<string> split(string, char);
 
 int cur_process_status(struct process_status *);
 void status_parsing(struct process_status *);
+double mem_reading();
+int log_text(string *);
