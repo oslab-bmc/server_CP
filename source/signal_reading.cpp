@@ -8,12 +8,12 @@ string find_pid(const string& path) {
 
     if ((fp = popen(command.data(), "r")) == NULL) {
         cerr << "popen error for " << command << endl;
-        exit(1);
+        // exit(1);
     }
 
     if (fread(res, MAX_LINE, MAX_LINE, fp) < 0) {
         cerr << "popen error for " << command << endl;
-        exit(1);
+        // exit(1);
     }
 
     pclose(fp);
@@ -27,7 +27,7 @@ void init_log(const string& pid, const string& path) {
 
     if ((fp = popen(command.data(), "r")) == NULL) {
         cerr << "popen error for " << command << endl;
-        exit(1);
+        // exit(1);
     }
 }
 

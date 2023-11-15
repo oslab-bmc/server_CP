@@ -16,7 +16,7 @@ int main()
 
     if (pthread_create(&log_thread, NULL, init_thread, NULL) != 0) {
         wcout << "Error creating thread\n" << endl;
-        exit(1);
+        // exit(1);
     }
 
     try
